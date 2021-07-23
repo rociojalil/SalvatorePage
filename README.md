@@ -16,6 +16,9 @@ If you want to have the code in your computer and open the page:
 6) Open your Code editor and done!
 In my case I use Visual Studio Code so once there, press the right button and select "Open with Live Server" to actually open the page in the browser. "Live Server" is an extension of VSC, you can download it :)
 
+You can see a video of how the page is in this publication of my Linkedin:
+https://www.linkedin.com/posts/rocio-de-luz-jalil_hello-linkedin-world-this-is-my-first-post-activity-6824442220486172672-yUvH
+
 
 Spanish:
 ¡Hola Mundo Github! ¡Esta es mi primera publicación de muchas por venir!
@@ -33,4 +36,6 @@ Si quieres tener el código en tu computadora y abrir la página:
 6) ¡Abre tu editor de código y listo!
 En mi caso uso Visual Studio Code, así que una vez allí, presione el botón derecho y seleccione "Abrir con Live Server" para abrir la página en el navegador. "Live Server" es una extensión de VSC, puedes descargarla :)
 
+Puedes ver un video de como es la página en esta publicacion de mi Linkedln:
+https://www.linkedin.com/posts/rocio-de-luz-jalil_hello-linkedin-world-this-is-my-first-post-activity-6824442220486172672-yUvH
 
