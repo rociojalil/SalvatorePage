@@ -1,0 +1,367 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	scroll-behavior: smooth;
+	/* es una pseudoCLASE para controlar comportamiento del scroll, me hace el desplazamiento cuando apreto un boton (about, galeria etc */
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	overflow: hidden;
+	/* para que todo lo que se desborde se oculte */
+	margin: auto;
+	/* para que centre todo */
+	padding: 60px 0;
+	/* arriba 60 y 0 hacia los lados asi hay espaciado entre elementos*/
+}
+
+header{
+	height: 100vh;
+	/* 100 que ocupa pantalla */
+	background-image: linear-gradient(to top, rgba(119, 15, 15, 0.404) 0%, #faa6c660 100%), url(/img/nueces.jpg);
+	/* esta es toda mi imagen principal */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.head{
+	text-align: center;
+	padding: 0;
+	/* porq antes en contenedor head le puse 60 0 pero acá sin 60px */
+	height: 100%;
+	display: flex;
+	/* posicionan vertical y horizontal al centro */
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+}
+
+.hamburguer {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	background: rgb(255, 255, 255);
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	/* esto al poner el mouse ahi se pone una mano como indicando que podes apretar click */
+	border-radius: 10px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.menu-navegacion{
+	position: fixed;
+	/* aunque hagamos scroll que este fijo */
+	top: 0;
+	right: 0;
+	width: 20vw;
+	/* 30 del ancho de pagina */
+	height: 100%;
+	background-image: linear-gradient(135deg, #3a020286 0%, #1f0202 100%);
+	display: flex;
+	flex-direction: column;
+	/* PARA uno abajo del otro */
+	justify-content: space-evenly; 
+	/* para que sea equitativo el espacio */
+	align-items: center;
+	transition: transform .3s ease-in-out;
+	transform: translate(110%);
+	/* con esto se fue ppor eso no o veo */
+	box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/*header:hover .menu-navegacion {
+	transform: translate(110%);
+}
+*/
+
+.spread{
+	transform: translate(0);
+	/* cuando hagas click que aparezca de nuevo */
+}
+
+.menu-navegacion a{
+	color: #fff
+}
+
+.titulo{
+	font-size: 60px;
+	margin-bottom: 15px;
+}
+.copy{
+	font-weight: 300;
+	font-size: 25px;
+}
+
+/*nuestro servicio*/
+
+.subtitulo{
+	text-align: center;
+	font-weight: 300;
+	color: #9f8ad0;
+	margin-bottom: 40px;
+	font-size: 40px;
+}
+
+.contenedor-servicio{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	/* si ya no entran en la misma linea van abajo */
+}
+.contenedor-servicio img{
+	width: 40%;
+}
+.familia{
+	width: 60%
+}
+.comiendo{
+	margin-bottom: 20px;
+}
+.n-comiendo{
+	margin-bottom: 7px;
+	color: #9f8ad0;
+}
+.number{
+	display: inline-block;
+	/* para darle un width y un height */
+	background-image: linear-gradient(to top, #aa2020 0%, #d4bece 100%);
+	width: 30px;
+	height: 30px;
+	color: rgb(250, 240, 240);
+	text-align: center;
+	border-radius: 50%;
+	font-weight: 700;
+	line-height: 30px;
+	/* los centra verticalmente igual */
+	margin-right: 10px;
+}
+.gallery{
+	background: #7412120c	;
+}
+.contenedor-galeria{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.img-galeria{
+	object-fit: cover;
+	width: 30%;
+	display: block;
+	margin-bottom: 15px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+	cursor: pointer;
+}
+
+.imagen-light{
+	position: fixed;
+	background: rgba(0,0,0,.6);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translate(100%);
+	/* está oculto con js hacemos magia */
+	transition: transform .2s ease-in-out;
+}
+.show{
+	transform: translate(0);
+}
+.agregar-imagen{
+	object-fit: cover;
+	width: 60%;
+	border-radius: 10px;
+	transform: scale(0);
+	transition: transform .3s .2s;
+}
+
+.showImage{
+	transform: scale(1);
+}
+.close{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 40px;
+	cursor: pointer;
+	
+}
+
+.sobre{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.cont-sobre{
+	width: 30%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.cont-sobre img{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+.n-sobre{
+	display: inline-block;
+	margin-top: 20px;
+	width: 100%;
+	font-weight: 400;
+}
+
+/* footer */
+
+footer{
+	background:rgb(90, 10, 10);
+	padding-bottom: 0.1px;
+}
+
+.footer-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.contact-us{
+	width: 50%;
+	color: #fff
+}
+
+.brand{
+	font-weight: 500;
+	font-size: 40px;
+}
+.brand+p{
+	font-weight: 500;
+}
+.social-media{
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+}
+.social-media-icon{
+	display: inline-block;
+	margin-left: 20px;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;
+}
+.social-media-icon:hover{
+	background: #fff;
+	color: #764ba2;
+}
+.social-media-icon i{
+	font-size: 30px;
+	line-height: 60px;
+}
+
+.line{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 2px;
+	background: #fff;
+	margin-bottom: 60px;
+}
+
+@media screen and (max-width: 800px) {
+	.menu-navegacion{
+		width: 50vw;
+	}
+	/* asi se va a ver en dispositivos moviles */
+	.titulo{
+		font-size: 40px;
+	}
+	.contenedor-servicio{
+		width: 80%;
+		margin-bottom: 40px;
+	}
+	.familia{
+		width: 80%;
+	}
+	.comiendo{
+		margin-bottom: 30px;
+	}
+	.agregar-imagen{
+		width: 80%;
+	}
+	.img-galeria{
+		width: 45%;
+	}
+	.cont-sobre{
+		width: 80%;
+	}
+	.footer-content{
+		justify-content: center;
+	}
+	.social-media{
+		width: 80%;
+		justify-content: space-evenly;
+	}
+	.social-media-icon{
+		margin-left: 0;
+	}
+	.social-media i{
+		margin-left: 0;
+	}
+	.contact-us{
+		text-align: center;
+		width: 80%;
+		margin-bottom: 40px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+	.menu-navegacion{
+		width: 65vw;
+	}
+	.hamburguer{
+		top: 20px;
+		right: 20px;
+	}
+	.titulo{
+		font-size: 30px;
+	}
+	.subtitulo{
+		font-size: 30px;
+	}
+	.agregar-imagen{
+		width: 95%;
+	}
+	.img-galeria{
+		width: 95%;
+	}
+	.social-media{
+		width: 100%;
+	}
+	.contact-us{
+		width: 90%;
+	}
+
+}
