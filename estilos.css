@@ -26,7 +26,7 @@ body{
 header{
 	height: 100vh;
 	/* 100 que ocupa pantalla */
-	background-image: linear-gradient(to top, rgba(119, 15, 15, 0.404) 0%, #faa6c660 100%), url(/img/nueces.jpg);
+	background-image: linear-gradient(to top, rgba(119, 15, 15, 0.404) 0%, #faa6c660 100%), url(/SalvatorePage/img/nueces.jpg);
 	/* esta es toda mi imagen principal */
 	background-repeat: no-repeat;
 	background-size: cover;
